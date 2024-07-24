@@ -21,7 +21,7 @@ Route::post('login', [UserController::class,'userPostLogin'])->name('user.postlo
 
 Route::get('logout', [UserController::class,'logout'])->name('user.logout');
 
-
+//Middleware
 Route::middleware(['auth'])->group(function () {
     // BookCategory
     Route::get('/book-category', [BookCategoryController::class, 'showCreateForm'])->name('bookCategory.create');
